@@ -1,13 +1,8 @@
 import "./App.css";
-
-function App() {
-  return (
-    <div>
-      {/*
-        Todo: 1 ให้ Declare ตัว Component ย่อย 
-       เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <header> 
-      */}
-      <header>
+//declare component
+function Header(){
+  return(
+    <header>
         <nav>
           <div className="logo">🚀 XYZ CORP</div>
           <ul className="nav-list">
@@ -26,12 +21,11 @@ function App() {
           </ul>
         </nav>
       </header>
-
-      {/*
-        Todo 2: ให้ Declare ตัว Component ย่อย
-        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <main> 
-      */}
-      <main>
+  )
+}
+function Main(){
+  return(
+    <main>
         <div className="company-detail-left">
           <h1>Welcome to XYZ Corp</h1>
           <p>Your Trusted Partner in Excellence</p>
@@ -60,12 +54,11 @@ function App() {
           <button className="learn-button">Learn More</button>
         </div>
       </main>
-
-      {/*
-        Todo 3: ให้ Declare ตัว Component ย่อย
-        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <section className="product-section"> 
-      */}
-      <section className="product-section">
+  )
+}
+function Section(){
+  return (
+    <section className="product-section">
         <div className="product-section-container">
           <h2 className="product-featured-heading">Featured Products</h2>
           <div className="product-card-list">
@@ -110,14 +103,41 @@ function App() {
           </div>
         </div>
       </section>
+  )
+}
+function Footer(){
+  return (
+    <footer>
+        <p>&copy; 2023 Your Ecommerce Store. All rights reserved.</p>
+      </footer>
+  )
+}
+
+function App() {
+  return (
+    <div>
+      {/*
+        Todo: 1 ให้ Declare ตัว Component ย่อย 
+       เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <header> 
+      */}
+      <Header/>
+      {/*
+        Todo 2: ให้ Declare ตัว Component ย่อย
+        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <main> 
+      */}
+      <Main />
+
+      {/*
+        Todo 3: ให้ Declare ตัว Component ย่อย
+        เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <section className="product-section"> 
+      */}
+      <Section/>
 
       {/*
         Todo 4: ให้ Declare ตัว Component ย่อย
         เพื่อแบ่งสัดส่วนของ HTML Element ในส่วนของ <footer> 
       */}
-      <footer>
-        <p>&copy; 2023 Your Ecommerce Store. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
